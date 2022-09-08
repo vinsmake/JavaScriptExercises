@@ -11,8 +11,11 @@ let boton1 = document.getElementById("boton_1");
 boton1.addEventListener("click", function (e) {
     e.preventDefault();
     let numero1 = parseInt(document.getElementById("campo_a").value);
+    let numero1class = document.getElementById("campo_a");
     let numero2 = parseInt(document.getElementById("campo_b").value);
+    let numero2class = document.getElementById("campo_b");
     let numero3 = parseInt(document.getElementById("campo_c").value);
+    let numero3class = document.getElementById("campo_c");
     if ((numero1 >= 1)
         &&
         (numero1 <= 100))
@@ -28,6 +31,9 @@ boton1.addEventListener("click", function (e) {
 
             } else { document.write("el numero mayor es: " + numero3);
             } 
+    } else {
+        numero1class.classList.remove("is-valid");
+        numero1class.classList.add("is-invalid");
     };
 });
 
